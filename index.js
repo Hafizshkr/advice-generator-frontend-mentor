@@ -7,12 +7,18 @@ async function getQuote() {
   try {
     const response = await fetch(url);
     const data = await response.json();
-    textQuote.innerText = `"${data.slip.advice}"`;
-    idQuote.innerText = `Advice #${data.slip.id}`;
+    showData(data);
   } catch (error) {
     textQuote.innerText = `Data fetching error`;
     throw new error();
   }
 }
+
+const showData = (data) => {
+  const { slip } = data;
+  console.log(slip);
+  textQuote.innerText = `"${data.slip.advice}"`;
+  idQuote.innerText = `Advice #${data.slip.id}`;
+};
 
 btnQuote.addEventListener("click", getQuote);

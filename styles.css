@@ -48,11 +48,83 @@ button {
 }
 
 button:hover {
-    cursor: pointer;
-    background-color: hsl(150, 100%, 66%);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  background-color: hsl(150, 100%, 66%);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hidden {
+  display: none;
+}
+
+.loader-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 50px;
+}
+
+.loader {
+  border: 5px solid #ffffff;
+  border-top: 5px solid hsl(150, 100%, 66%);
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  animation: spin 1s linear infinite;
+  display: none;
+}
+
+.deco-mobile {
+  display: none;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @media (max-width: 375px) {
-    
+  .card {
+    border-radius: 12px;
+    width: 330px;
+    height: 250px;
+    display: flex;
+    color: hsl(193, 38%, 86%);
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(217, 19%, 24%);
+    position: relative;
+  }
+  #text-quote {
+    text-align: center;
+    padding-top: 8px;
+    padding-bottom: 12px;
+    font-size: 16px;
+    text-wrap: balance;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  button {
+    position: absolute;
+    bottom: -25px;
+    left: 44%;
+    border-style: none;
+    border-radius: 50px;
+    padding: 8px;
+    background-color: hsl(150, 100%, 66%);
+  }
+  .deco-mobile {
+    display: block;
+  }
+  .deco-desktop {
+    display: none;
+  }
+  .loader-container {
+    padding-bottom: 25px;
+  }
 }

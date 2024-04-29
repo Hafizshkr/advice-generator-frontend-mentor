@@ -13,7 +13,7 @@ async function getQuote() {
     setTimeout(() => {
       showContent();
       showData(data);
-    }, 100);
+    }, 500);
   } catch (error) {
     textQuote.innerText = `Data fetching error`;
     throw new error();

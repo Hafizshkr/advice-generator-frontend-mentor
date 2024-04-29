@@ -61,7 +61,7 @@ button:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-bottom: 50px;
+  padding-bottom: 10px;
 }
 
 .loader {
@@ -125,6 +125,6 @@ button:hover {
     display: none;
   }
   .loader-container {
-    padding-bottom: 25px;
+    padding-bottom: 5px;
   }
 }
